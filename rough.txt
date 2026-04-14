@@ -1,0 +1,36 @@
+install the virtual environment (pip install virtualenv)
+create a virtual  environment (virtualenv env)
+Set-ExecutionPolicy unrestricted 
+run it in powershell admin and allow 
+activate the environment (.\env\Scripts\activate.ps1)
+pip install flask (to install flask in your environment)
+make your python file  in the same folder that the environment has been made (not inside env)
+copy the standard flask minimal app
+make the app run but writing , if __name__ == "__main__":app.run(debug = True, port = 8000)
+as we see port can be changed to whatever desired url by the host 
+this port changing can/should be done only in development , not in production 
+moreover we can make multiple routes (ex: http://127.0.0.1:8000/products)
+we can make 2 utility directories/folders called static and templates in the folder that has our env 
+any file in static we can access it by changing our url; ex: http://127.0.0.1:8000/static/boros.txt
+btw this was only for understanding , such useless files must never be kept in the static dir
+and the templates folder is used to insert templates into our web page 
+import render tempplate along with flask , then return whatever html file content u want 
+view page source to verify 
+so this way were are able to add html stuff in our code to structure and beautify it 
+but this is much better done when we get out stuff from bootstrap 
+paste the starter template from bootstrap into the file in template 
+also get navbar from components of bootstrap and paste it in body of the starter template we got 
+we can also get code for forms from forms of bootstrap 
+copy it in a container class named div after creating it in our index.html 
+also get tables from bootstrap and paste it in another div.container 
+adjust margins and spacing if desired , add whatever heading u want 
+change/edit input types and etc according to interest 
+now to create a database we use flasksqlalchemy in our env, so type pip install flask-sqlalchemy '
+import sqlalchemy, and add uri to the app.config , also adjust the track modifications if needed 
+make a class for making the database schemer to decide what all we want to see in the database columns
+also add the repr method to decide what to see when we print an object of todo
+open the python interpreter and then import our app's database 
+if incase we encounter error , 
+1.Add app.app_context().push() before the class definition.
+2. Import app and db from your application.
+3. then, db.create_all() again.
